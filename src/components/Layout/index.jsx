@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Box } from "@mui/material";
-import Navbar from "../Navbar";
 
+import { Navbar } from "../../components/index";
 
 const Layout = ({ children }) => {
   return (
