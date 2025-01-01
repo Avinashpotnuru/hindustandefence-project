@@ -42,9 +42,9 @@ const Navbar = () => {
             anchor="left"
             open={mobileOpen}
             onClose={handleDrawerToggle}
-            classes={{ paper: "w-64" }}
+            classes={{ paper: "w-full" }}
           >
-            <MobileDrawer />
+            <MobileDrawer setMobileOpen={setMobileOpen} />
           </Drawer>
         </AppBar>
       </Box>
