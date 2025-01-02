@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Box } from "@mui/material";
+import { Box} from "@mui/material";
 
 import { Navbar } from "../../components/index";
 
@@ -9,6 +9,7 @@ const Layout = ({ children }) => {
       <Navbar />
       {children}
       footer
+    
     </Box>
   );
 };
