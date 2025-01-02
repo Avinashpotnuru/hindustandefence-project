@@ -1,30 +1,41 @@
 /* eslint-disable react/prop-types */
 import { Box, Divider } from "@mui/material";
 
-const SectionTitle = ({ title,mainTitle }) => {
+const SectionTitle = ({
+  title,
+  mainTitle,
+  textColor = "black", // Default text color
+  dividerColor = "white", // Default divider color
+}) => {
   return (
-    <Box className="flex flex-col justify-center items-center space-y-2 lg:space-y-4    gap-4  w-full p-5 ">
-      <Box className="flex justify-center items-center gap-3 w-[70%] md:w-1/2 uppercase ">
+    <Box className="flex flex-col justify-center items-center space-y-2 lg:space-y-4 gap-4 w-full p-5">
+      <Box className="flex justify-center items-center gap-3 w-[70%] md:w-1/2 uppercase">
         <Divider
           sx={{
-            backgroundColor: "orange ",
+            backgroundColor: dividerColor,
             width: { xs: "50%", lg: "20%" },
             height: "3px",
           }}
         />
-        <h1 className="font-semibold tracking-wide text-sm uppercase text-black">
+        <h1
+          className={`font-semibold tracking-wide text-sm uppercase`}
+          style={{ color: textColor }}
+        >
           {title}
         </h1>
         <Divider
           sx={{
-            backgroundColor: "orange ",
+            backgroundColor: dividerColor,
             width: { xs: "50%", lg: "20%" },
             height: "3px",
           }}
         />
       </Box>
 
-      <h3 className="font-bold font-rajdhani tracking-wide text-3xl md:text-4xl uppercase text-black lg:text-5xl">
+      <h3
+        className="font-bold font-rajdhani tracking-wide text-3xl md:text-4xl uppercase lg:text-5xl"
+        style={{ color: textColor }}
+      >
         {mainTitle}
       </h3>
     </Box>

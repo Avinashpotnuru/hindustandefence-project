@@ -15,7 +15,7 @@
      h2 {
       @apply text-xl font-semibold text-gray-800 tracking-wide; /* Default styles */
       @apply md:text-3xl md:font-bold; /* Medium screens */
-      @apply lg:text-4xl lg:font-extrabold; /* Large screens */
+      @apply lg:text-5xl lg:font-extrabold; /* Large screens */
     }
   }
   

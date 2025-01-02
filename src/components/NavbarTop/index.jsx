@@ -17,7 +17,7 @@ const NavbarTop = ({ Logo }) => {
           <CallIcon color="primary" />
           <Box className="hidden sm:flex flex-col">
             <h1>Need help? Make a call</h1>
-            <h2 className="text-[#f5961b] font-bold">8919016096</h2>
+            <h4 className="text-[#f5961b] font-bold">8919016096</h4>
           </Box>
         </Box>
         <Box className="flex items-center space-x-3">

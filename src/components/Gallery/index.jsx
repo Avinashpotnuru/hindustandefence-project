@@ -25,14 +25,18 @@ const Gallery = () => {
         backgroundColor: "white",
 
         "@media (min-width: 1024px)": {
-          minHeight: "100vh", 
+          minHeight: "100vh",
           backgroundImage: `url(${HomeGalleryBackGround})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         },
       }}
     >
-      <SectionTitle title="Gallery" mainTitle="Unparalleled Legacy" />
+      <SectionTitle
+        title="Gallery"
+        mainTitle="Unparalleled Legacy"
+        dividerColor="orange"
+      />
       <Box className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
         {galleryImages.map((val, index) => (
           <Box
@@ -42,7 +46,7 @@ const Gallery = () => {
             <img
               src={val}
               alt="images"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover hover:scale-110 transition-all duration-300"
             />
 
             <Box className="absolute w-full bottom-[-40px] p-2 z-10 group-hover:bottom-0 transition-all duration-300 text-sm lg:text-base titleBg ">

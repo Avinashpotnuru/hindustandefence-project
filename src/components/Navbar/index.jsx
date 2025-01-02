@@ -23,7 +23,7 @@ const Navbar = () => {
         <AppBar
           ref={navRef}
           sx={{ backgroundColor: "transparent", boxShadow: "none" }}
-          position="static"
+          position="sticky"
         >
           <Toolbar className="flex md:justify-between items-center text-black lg:w-[80%] lg:m-auto">
             <IconButton

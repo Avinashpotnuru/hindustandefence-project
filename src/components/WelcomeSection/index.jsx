@@ -23,7 +23,7 @@ const WelcomeSection = () => {
         />
         <img className="w-full lg:w-1/2 h-auto" src={Welcome} alt="Welcome" />
         <Box className="w-full lg:w-1/2 bg-white flex flex-col justify-center items-center p-5 lg:p-10">
-          <HeadingTitle title="About Our Academy" />
+          <HeadingTitle text="About Our Academy" />
 
           <Box className="gap-3 space-y-3 lg:space-y-6 my-2">
             <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold">

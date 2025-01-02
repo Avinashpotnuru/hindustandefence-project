@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { Header,WelcomeSection,Gallery } from "../components/index";
+import { Header,WelcomeSection,Gallery,Testimonials,Courses } from "../components/index";
 
 const LandingPage = () => {
   return (
@@ -7,6 +7,8 @@ const LandingPage = () => {
       <Header />
       <WelcomeSection />
       <Gallery />
+      <Testimonials/>
+      <Courses/>
 
     </Box>
   );
