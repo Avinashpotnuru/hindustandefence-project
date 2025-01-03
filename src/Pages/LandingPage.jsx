@@ -10,12 +10,14 @@ import {
   Magazine,
   Awards,
   VideoGallery,
-  Stories
+  Stories,
+  EnquiryNowModel
 } from "../components/index";
 
 const LandingPage = () => {
   return (
     <Box className="w-full">
+      <EnquiryNowModel />
       <Header />
       <WelcomeSection />
       <Gallery />
@@ -25,7 +27,7 @@ const LandingPage = () => {
       <Exams />
       <Awards />
       <Magazine />
-      <VideoGallery/>
+      <VideoGallery />
       <MoreInformation />
     </Box>
   );

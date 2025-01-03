@@ -16,15 +16,15 @@ const DesktopMenu = ({ activeTab, setActiveTab }) => {
           margin: "0 auto",
         }}
       >
-        {desktopMenuItems.map((val) => (
+        {desktopMenuItems?.map((val) => (
           <Box
             onMouseMove={() => setActiveTab(val.id)}
             key={val.id}
             className="relative"
           >
             <Box className="flex gap-2 space-x-2">
-              <h1>{val.title}</h1>
-              {val.children.length > 0 && (
+              <h1>{val?.title}</h1>
+              {val?.children?.length > 0 && (
                 <KeyboardArrowDownRoundedIcon
                   className={`transition-transform ${
                     activeTab === val.id ? "rotate-180" : ""
@@ -32,9 +32,9 @@ const DesktopMenu = ({ activeTab, setActiveTab }) => {
                 />
               )}
             </Box>
-            {val.children.length ? (
+            {val?.children?.length ? (
               <Box
-                className={`absolute children-dropdown text-black bg-white p-2 top-[40px] ${
+                className={`absolute children-dropdown text-black font-semibold bg-white space-y-3 min-w-[200px] p-2 top-[40px] ${
                   activeTab === val.id ? "active" : ""
                 }`}
               >

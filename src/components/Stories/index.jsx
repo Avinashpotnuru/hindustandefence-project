@@ -1,5 +1,48 @@
+import CountUp from "react-countup";
+
+import { Box } from "@mui/material";
+
+import StroiesBg from "/stories.webp";
+import HeadingTitle from "../HeadingTitle";
+
 const Stories = () => {
-  return <div>Stories</div>;
+  const content = [
+    { number: 18, title: " Years of Experience" },
+    { number: 1200, title: "Join Indian Army" },
+    { number: 100, title: "Best Teachers" },
+    { number: 5000, title: "Total Students" },];
+  return (
+    <Box className="relative flex flex-col justify-center items-center">
+      <img className="w-full h-auto" src={StroiesBg} alt="Stories" />
+      <Box className="bg-white border-t-2 border-[#048f18]  w-full md:absolute lg:right-28 lg:top-30 xl:top-56  md:h-[380px] lg:h-[500px] md:w-[400px] lg:w-[500px] ">
+        <Box className="h-[10px] bg-[#F5961B] opacity-50 !w-full">{"  "}</Box>
+        <Box className="flex flex-col justify-center items-center p-9">
+          <HeadingTitle text="Stories" content="Success Story" />
+          <h3 className=" font-semibold text-sm md:text-lg lg:text-2xl">
+            Many Students Have Already Selected In Armed Forces Through
+            Parmanu-defence
+          </h3>
+          <Box className="grid grid-cols-2 gap-8 mt-8 ">
+            {content.map((item, index) => (
+              <CountUp key={index} start={0} end={item.number} delay={0}>
+                {({ countUpRef }) => (
+                  <Box className="flex flex-col items-center text-center space-x-2 text-4xl font-bold text-[#F5961B]">
+                    <Box className="flex items-center">
+                      <span ref={countUpRef} />
+                      <span className="ml-1">+</span>{" "}
+                    </Box>
+                    <h1 className="text-sm text-black font-semibold !m-0">
+                      {item.title}
+                    </h1>
+                  </Box>
+                )}
+              </CountUp>
+            ))}
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
 };
 
 export default Stories;
