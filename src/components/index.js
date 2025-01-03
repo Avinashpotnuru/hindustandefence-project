@@ -11,6 +11,7 @@ export { default as Testimonials } from "./Testimonials";
 export { default as Courses } from "./Courses";
 export { default as CustomSlider } from "./CustomSlider";
 export { default as CourseCard } from "./CourseCard";
-
-
-
+export { default as Exams } from "./Exams";
+export { default as ExamCard } from "./ExamCard";
+export { default as MoreInformation } from "./MoreInformation";
+export { default as Magazine } from "./Magazine";

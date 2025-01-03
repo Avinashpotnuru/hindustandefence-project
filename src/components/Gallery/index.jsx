@@ -49,7 +49,7 @@ const Gallery = () => {
               className="w-full h-full object-cover hover:scale-110 transition-all duration-300"
             />
 
-            <Box className="absolute w-full bottom-[-40px] p-2 z-10 group-hover:bottom-0 transition-all duration-300 text-sm lg:text-base titleBg ">
+            <Box className="absolute my-auto w-full bottom-[-40px] py-2 px-1 z-10 group-hover:bottom-0 transition-all duration-300 text-xs lg:text-base titleBg overflow-hidden max-h-[40px]">
               {tittleData[index]}
             </Box>
           </Box>

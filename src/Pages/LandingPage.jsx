@@ -1,5 +1,14 @@
 import { Box } from "@mui/material";
-import { Header,WelcomeSection,Gallery,Testimonials,Courses } from "../components/index";
+import {
+  Header,
+  WelcomeSection,
+  Gallery,
+  Testimonials,
+  Courses,
+  Exams,
+  MoreInformation,
+  Magazine
+} from "../components/index";
 
 const LandingPage = () => {
   return (
@@ -7,9 +16,11 @@ const LandingPage = () => {
       <Header />
       <WelcomeSection />
       <Gallery />
-      <Testimonials/>
-      <Courses/>
-
+      <Testimonials />
+      <Courses />
+      <Exams />
+      <Magazine />
+      <MoreInformation />
     </Box>
   );
 };

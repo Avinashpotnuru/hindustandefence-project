@@ -18,8 +18,8 @@
   opacity: 1;
   transform: translateY(0);
 }
-
-@media (min-width: 768px) and (max-width: 992px) {
+.header{
+  @media (min-width: 768px) and (max-width: 992px) {
   .slick-track {
     height: 80vh;
   }
@@ -29,6 +29,10 @@
     background-position: center bottom;
   }
 }
+
+}
+
+
 
 /* Styling the vertical scrollbar */
 ::-webkit-scrollbar {
@@ -68,24 +72,15 @@
 }
 
 .courses {
-
   .slick-dots {
     bottom: -50px;
   }
 
-
   @media (min-width: 768px) and (max-width: 992px) {
     .slick-track {
       height: 38vh;
-     
 
       padding: 20px 0px;
     }
-
-
   }
-
-
-
-
 }

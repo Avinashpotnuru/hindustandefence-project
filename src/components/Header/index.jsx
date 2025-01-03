@@ -67,10 +67,11 @@ const Header = () => {
     autoplaySpeed: 3000,
     nextArrow: showArrows ? <NextArrow /> : null,
     prevArrow: showArrows ? <PrevArrow /> : null,
+    
   };
 
   return (
-    <Box>
+    <Box className="header">
       <Slider className=" h-auto" {...settings}>
         {images.map((image, index) => (
           <img
