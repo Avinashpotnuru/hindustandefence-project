@@ -7,7 +7,10 @@ import {
   Courses,
   Exams,
   MoreInformation,
-  Magazine
+  Magazine,
+  Awards,
+  VideoGallery,
+  Stories
 } from "../components/index";
 
 const LandingPage = () => {
@@ -16,10 +19,13 @@ const LandingPage = () => {
       <Header />
       <WelcomeSection />
       <Gallery />
+      <Stories />
       <Testimonials />
       <Courses />
       <Exams />
+      <Awards />
       <Magazine />
+      <VideoGallery/>
       <MoreInformation />
     </Box>
   );

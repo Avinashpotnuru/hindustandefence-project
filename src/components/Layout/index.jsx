@@ -1,16 +1,17 @@
 /* eslint-disable react/prop-types */
-import { Box} from "@mui/material";
+import { Box } from "@mui/material";
 
-import { Navbar } from "../../components/index";
+import { FooterBottom, Navbar, Footer } from "../../components/index";
 
 const Layout = ({ children }) => {
   return (
-    <Box>
+    <>
+   
       <Navbar />
-      {children}
-      footer
-    
-    </Box>
+      <Box className="">{children}</Box>
+      <Footer />
+      <FooterBottom />
+    </>
   );
 };
 

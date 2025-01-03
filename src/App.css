@@ -18,17 +18,18 @@
   opacity: 1;
   transform: translateY(0);
 }
-.header{
-  @media (min-width: 768px) and (max-width: 992px) {
-  .slick-track {
-    height: 80vh;
-  }
 
-  .slick-slide img {
-    height: 100vh;
-    background-position: center bottom;
+.header {
+  @media (min-width: 768px) and (max-width: 992px) {
+    .slick-track {
+      height: 80vh;
+    }
+
+    .slick-slide img {
+      height: 100vh;
+      background-position: center bottom;
+    }
   }
-}
 
 }
 
@@ -83,4 +84,8 @@
       padding: 20px 0px;
     }
   }
+}
+
+.awards{
+  
 }
