@@ -2,8 +2,11 @@ import { Box, Button } from "@mui/material";
 import Welcome from "/welcome.webp";
 import Flag from "/plain.svg";
 import Complete from "/complete.svg";
-import { HeadingTitle} from "../index";
+import { HeadingTitle } from "../index";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import { motion } from "framer-motion";
+
+import { variants } from "../../Animations";
 
 const data = [
   "Best Academy",
@@ -21,8 +24,23 @@ const WelcomeSection = () => {
           src={Flag}
           alt="Welcome"
         />
-        <img className="w-full lg:w-1/2 h-auto" src={Welcome} alt="Welcome" />
-        <Box className="w-full lg:w-1/2 bg-white flex flex-col justify-center items-center p-5 lg:p-10">
+
+        <motion.img
+          variants={variants["slideFromLeft"]}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="w-full lg:w-1/2 h-auto"
+          src={Welcome}
+          alt="Welcome"
+        />
+        <motion.div
+          variants={variants["slideFromRight"]}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="w-full lg:w-1/2 bg-white flex flex-col justify-center items-center p-5 lg:p-10"
+        >
           <HeadingTitle text="About Our Academy" />
 
           <Box className="gap-3 space-y-3 lg:space-y-6 my-2">
@@ -61,7 +79,7 @@ const WelcomeSection = () => {
               Read More
             </Button>
           </Box>
-        </Box>
+        </motion.div>
       </Box>
     </>
   );

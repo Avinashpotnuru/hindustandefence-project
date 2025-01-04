@@ -1,25 +1,25 @@
 import { useState, useEffect } from "react";
 
 const useResponsive = () => {
-  const [screenType, setScreenType] = useState("desktop"); // Default to desktop
+  const [screenType, setScreenType] = useState("desktop");
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 768) {
-        setScreenType("mobile"); // For screens smaller than 768px
+        setScreenType("mobile");
       } else if (width >= 768 && width < 1024) {
-        setScreenType("tablet"); // For screens between 768px and 1024px
+        setScreenType("tablet");
       } else {
-        setScreenType("desktop"); // For screens larger than 1024px
+        setScreenType("desktop");
       }
     };
 
-    handleResize(); // Check on initial load
-    window.addEventListener("resize", handleResize); // Listen for window resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize); // Cleanup on component unmount
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

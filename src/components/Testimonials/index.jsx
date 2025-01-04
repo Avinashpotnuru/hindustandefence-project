@@ -1,8 +1,12 @@
-import { Box } from "@mui/material";
+;
 
 import { HeadingTitle } from "../index";
 
 import { CustomSlider } from "../index";
+import { motion } from "framer-motion";
+
+import { variants } from "../../Animations";
+
 
 var settings = {
   dots: true,
@@ -45,14 +49,20 @@ const mobileImages = Array.from({ length: 12 }).map(
 
 const Testimonials = () => {
   return (
-    <Box className="bg-[#fff5eb] py-11 px-5 md:px-8 lg:py-16 lg:px-20 testimonials ">
+    <motion.div
+      variants={variants["slideFromBottom"]}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="bg-[#fff5eb] py-11 px-5 md:px-8 lg:py-16 lg:px-20 testimonials "
+    >
       <HeadingTitle text="Testimonials" content="What our Students Say" />
       <CustomSlider
         contentData={mobileImages}
         settings={settings}
         content="images"
       />
-    </Box>
+    </motion.div>
   );
 };
 

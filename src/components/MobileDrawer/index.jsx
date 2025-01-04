@@ -36,25 +36,25 @@ const MobileDrawer = ({ setMobileOpen }) => {
       <List>
         {desktopMenuItems?.map((item, index) => (
           <div key={index}>
-            <ListItem onClick={() => handleToggle(item.id)} button>
-              <ListItemText primary={item.title} className="text-gray-800" />
-              {item.children.length > 0 && (
+            <ListItem onClick={() => handleToggle(item?.id)}>
+              <ListItemText primary={item?.title} className="text-gray-800" />
+              {item?.children?.length > 0 && (
                 <KeyboardArrowDownRoundedIcon
                   className={`transition-transform ${
-                    activeTab === item.id ? "rotate-180" : ""
+                    activeTab === item?.id ? "rotate-180" : ""
                   }`}
                 />
               )}
             </ListItem>
-            {activeTab === item.id && item.children.length > 0 && (
+            {activeTab === item?.id && item?.children?.length > 0 && (
               <Box
                 style={{
                   padding: "10px",
                   backgroundColor: "white",
-                  border: "1px solid gray",
+                 
                 }}
               >
-                {item.children.map((child, childIndex) => (
+                {item?.children?.map((child, childIndex) => (
                   <h1
                     style={{ color: "black", margin: "5px 0" }}
                     key={childIndex}

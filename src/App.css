@@ -6,6 +6,7 @@
   padding: 0;
   border: 0;
   font-family: inherit;
+  
 }
 
 .children-dropdown {
@@ -35,7 +36,7 @@
 
 
 
-/* Styling the vertical scrollbar */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -86,6 +87,16 @@
   }
 }
 
-.awards{
-  
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none !important;
+}
+
+.MuiDialog-paperScrollPaper {
+  overflow: auto !important; 
 }

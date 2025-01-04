@@ -1,6 +1,9 @@
 import { Box } from "@mui/material";
 import HomeGalleryBackGround from "/homegallery.webp";
 import { SectionTitle } from "../index";
+import { motion } from "framer-motion";
+
+import { variants } from "../../Animations";
 
 const Gallery = () => {
   const galleryImages = Array.from({ length: 8 }).map(
@@ -20,7 +23,7 @@ const Gallery = () => {
 
   return (
     <Box
-      className="py-8 md:py-10 lg:py-14 px-5 md:px-8 lg:px-20"
+      className="py-8 md:py-10 lg:py-14 px-5 md:px-8 lg:px-20 "
       sx={{
         backgroundColor: "white",
 
@@ -37,7 +40,13 @@ const Gallery = () => {
         mainTitle="Unparalleled Legacy"
         dividerColor="orange"
       />
-      <Box className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
+      <motion.div
+        variants={variants["slideFromBottom"]}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-5 "
+      >
         {galleryImages.map((val, index) => (
           <Box
             key={index}
@@ -54,7 +63,7 @@ const Gallery = () => {
             </Box>
           </Box>
         ))}
-      </Box>
+      </motion.div>
     </Box>
   );
 };

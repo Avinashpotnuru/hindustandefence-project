@@ -18,7 +18,8 @@ const DesktopMenu = ({ activeTab, setActiveTab }) => {
       >
         {desktopMenuItems?.map((val) => (
           <Box
-            onMouseMove={() => setActiveTab(val.id)}
+            onMouseEnter={() => setActiveTab(val.id)} // Show dropdown when mouse enters
+            onMouseLeave={() => setActiveTab(null)} // Hide dropdown when mouse leaves
             key={val.id}
             className="relative"
           >
@@ -34,12 +35,15 @@ const DesktopMenu = ({ activeTab, setActiveTab }) => {
             </Box>
             {val?.children?.length ? (
               <Box
-                className={`absolute children-dropdown text-black font-semibold bg-white space-y-3 min-w-[200px] p-2 top-[40px] ${
+                className={`absolute children-dropdown text-black font-semibold bg-white space-y-3 !min-w-[240px] p-2 top-[40px] ${
                   activeTab === val.id ? "active" : ""
                 }`}
               >
                 {val.children.map((child) => (
-                  <h1 className="text-black space-y-3" key={child}>
+                  <h1
+                    className="text-black space-y-3 font-semibold text-sm px-2"
+                    key={child}
+                  >
                     {child}
                   </h1>
                 ))}

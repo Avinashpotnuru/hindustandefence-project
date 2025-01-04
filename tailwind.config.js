@@ -4,12 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        rajdhani: ["Rajdhani", "serif"], // Define your custom font family
+        rajdhani: ["Rajdhani", "serif"],
       },
-      colors: {
-        gradientOrange1: "#F5961B", // Starting color
-        gradientOrange2: "#E76420", // Midpoint color
-      },
+
       backgroundImage: {
         "orange-gradient":
           "linear-gradient(to right, #F5961B 0%, #E76420 51%, #F5961B 100%)",

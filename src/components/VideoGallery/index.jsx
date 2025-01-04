@@ -2,6 +2,10 @@ import { Box } from "@mui/material";
 import VideoBg from "/videogallerybg.webp";
 import { SectionTitle } from "../index";
 import ReactPlayer from "react-player/youtube";
+import { motion } from "framer-motion";
+
+import { variants } from "../../Animations";
+
 
 const VideoGallery = () => {
   return (
@@ -16,7 +20,13 @@ const VideoGallery = () => {
         mainTitle="Video Gallery"
         textColor="white"
       />
-      <Box className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <motion.div
+        variants={variants["slideFromBottom"]}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+      >
         {["_wwKuirP9Qg", "22NVcnBCl80"].map((item, index) => (
           <Box
             key={index}
@@ -36,7 +46,7 @@ const VideoGallery = () => {
             />
           </Box>
         ))}
-      </Box>
+      </motion.div>
     </Box>
   );
 };

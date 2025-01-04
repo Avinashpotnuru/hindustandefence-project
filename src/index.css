@@ -8,14 +8,14 @@
     @apply font-rajdhani;
 
     h3 {
-      @apply text-xl font-semibold text-gray-800 tracking-wide; /* Default styles */
-      @apply md:text-2xl md:font-bold; /* Medium screens */
-      @apply lg:text-3xl lg:font-extrabold; /* Large screens */
+      @apply text-xl font-semibold text-gray-800 tracking-wide; 
+      @apply md:text-2xl md:font-bold; 
+      @apply lg:text-3xl lg:font-extrabold; 
     }
      h2 {
-      @apply text-xl font-semibold text-gray-800 tracking-wide; /* Default styles */
-      @apply md:text-3xl md:font-bold; /* Medium screens */
-      @apply lg:text-5xl lg:font-extrabold; /* Large screens */
+      @apply text-xl font-semibold text-gray-800 tracking-wide; 
+      @apply md:text-3xl md:font-bold; 
+      @apply lg:text-5xl lg:font-extrabold; 
     }
   }
   

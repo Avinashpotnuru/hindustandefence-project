@@ -11,13 +11,14 @@ import {
   Awards,
   VideoGallery,
   Stories,
-  EnquiryNowModel
+  EnquiryNowModel,
 } from "../components/index";
 
 const LandingPage = () => {
   return (
-    <Box className="w-full">
+    <Box className="w-full overflow-hidden">
       <EnquiryNowModel />
+
       <Header />
       <WelcomeSection />
       <Gallery />

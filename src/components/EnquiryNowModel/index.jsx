@@ -1,7 +1,8 @@
-import { Box, Dialog, Button, Typography } from "@mui/material";
+import { Box, Dialog, Button, Typography, IconButton } from "@mui/material";
 import EnqueryingImage from "/enqueryimg.webp";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import CloseIcon from "@mui/icons-material/Close";
 
 const courses = [
   "---Select Courses---",
@@ -34,8 +35,41 @@ const EnquiryNowModel = () => {
   };
 
   return (
-    <Dialog open={open} onClose={handleClose} maxWidth="md">
-      <Box className="p-3 flex flex-col lg:flex-row justify-center gap-6 items-center relative">
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      maxWidth="md"
+      className="hide-scrollbar"
+      sx={{
+        "& .MuiDialog-paper": {
+          overflow: "auto", 
+          maxHeight: "90vh", 
+          display: "flex",
+          flexDirection: "column",
+          
+          "@media (max-width:600px)": {
+            maxHeight: "100vh", 
+          },
+        },
+        "& .MuiDialogContent-root": {
+          overflowY: "auto", 
+        },
+      }}
+    >
+      <IconButton
+        aria-label="close"
+        onClick={handleClose}
+        sx={{
+          position: "absolute",
+          right: 10,
+          top: 15,
+          zIndex: 1,
+          color: "grey",
+        }}
+      >
+        <CloseIcon />
+      </IconButton>
+      <Box className="p-3 flex flex-col lg:flex-row justify-center gap-1 lg:gap-6 items-center relative  ">
         <Box className="w-full lg:w-[60%]">
           <img
             src={EnqueryingImage}
@@ -45,13 +79,13 @@ const EnquiryNowModel = () => {
         </Box>
 
         <Box className="w-full lg:w-[40%] mt-2 p-5">
-          <Typography variant="h6" align="center" gutterBottom>
+          <Typography variant="h6" align="left" gutterBottom>
             Enquiry Now
           </Typography>
           <Typography
             variant="body2"
             color="textSecondary"
-            align="center"
+            align="left"
             gutterBottom
           >
             For Getting Free Study Material and Test Series
@@ -63,7 +97,7 @@ const EnquiryNowModel = () => {
             onSubmit={handleSubmit(onSubmit)}
             sx={{ mt: 1 }}
           >
-            {/* Name */}
+           
             <Box sx={{ mb: 2 }}>
               <input
                 id="name"
@@ -83,7 +117,7 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-            {/* Phone */}
+          
             <Box sx={{ mb: 2 }}>
               <input
                 id="phone"
@@ -109,7 +143,7 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-            {/* Email */}
+           
             <Box sx={{ mb: 2 }}>
               <input
                 id="email"
@@ -135,7 +169,7 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-            {/* Class */}
+           
             <Box sx={{ mb: 2 }}>
               <input
                 id="class"
@@ -155,7 +189,7 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-            {/* City */}
+           
             <Box sx={{ mb: 2 }}>
               <input
                 id="city"
@@ -175,7 +209,7 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-            {/* Course */}
+           
             <Box sx={{ mb: 3, width: "100%" }}>
               <select
                 id="course"
@@ -185,10 +219,10 @@ const EnquiryNowModel = () => {
                   height: "35px",
                   backgroundColor: "#fff5eb",
                   border: "1px solid #f5961b",
-                  width: "100%", // Full width of its container
-                  padding: "0 10px", // Adjusts the padding for better alignment
+                  width: "100%", 
+                  padding: "0 10px",
                   boxSizing: "border-box",
-                  overflow: "hidden", // Makes sure padding doesn't affect the width
+                  overflow: "hidden", 
                 }}
                 {...register("course", {
                   validate: (value) =>
@@ -206,7 +240,7 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-            {/* Submit Button */}
+          
             <Button
               fullWidth
               variant="contained"

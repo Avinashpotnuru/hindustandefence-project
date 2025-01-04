@@ -5,7 +5,7 @@ import CourseCard from "../CourseCard";
 const CustomSlider = ({ contentData, settings, content }) => {
   return (
     <Slider className="h-auto mt-2 lg:mt-4" {...settings}>
-      {/* If content is 'images', render image slides */}
+      
       {content === "images" &&
         contentData.map((image, index) => (
           <div key={index} className="p-2">
@@ -17,7 +17,7 @@ const CustomSlider = ({ contentData, settings, content }) => {
           </div>
         ))}
 
-      {/* If content is 'text', render text content */}
+     
       {content === "text" &&
         contentData.map((item, index) => (
           <CourseCard key={index} item={item} />

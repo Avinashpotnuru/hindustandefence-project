@@ -1,14 +1,21 @@
 /* eslint-disable react/prop-types */
 import { Box, Divider } from "@mui/material";
-
+import { motion } from "framer-motion";
+import { variants } from "../../Animations";
 const SectionTitle = ({
   title,
   mainTitle,
-  textColor = "black", // Default text color
-  dividerColor = "white", // Default divider color
+  textColor = "black", 
+  dividerColor = "white",
 }) => {
   return (
-    <Box className="flex flex-col justify-center items-center space-y-2 lg:space-y-4 gap-4 w-full p-5">
+    <motion.div
+      variants={variants["slideFromBottom"]}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="flex flex-col justify-center items-center space-y-2 lg:space-y-4 gap-4 w-full p-5"
+    >
       <Box className="flex justify-center items-center gap-3 w-[70%] md:w-1/2 ">
         <Divider
           sx={{
@@ -38,7 +45,7 @@ const SectionTitle = ({
       >
         {mainTitle}
       </h3>
-    </Box>
+    </motion.div>
   );
 };
 

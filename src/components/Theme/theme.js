@@ -3,10 +3,10 @@ import { createTheme } from "@mui/material/styles";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "#F5961B", // Matches 'gradientOrange1' in Tailwind
+      main: "#F5961B", 
     },
     secondary: {
-      main: "#E76420", // Matches 'gradientOrange2' in Tailwind
+      main: "#E76420", 
     },
     gradient: {
       orange:
@@ -14,7 +14,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Rajdhani", "serif"].join(","), // Matches Tailwind's 'rajdhani'
+    fontFamily: ["Rajdhani", "serif"].join(","), 
   },
-  spacing: 8, // Base spacing unit, can be used similarly to Tailwind's spacing
+  spacing: 8, 
 });

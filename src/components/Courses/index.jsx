@@ -5,6 +5,9 @@ import { CustomSlider } from "../index";
 import CourseBg from "/coursebg.webp";
 import SectionTitle from "../SectionTitle";
 import { courseContent } from "../../Data";
+import { motion } from "framer-motion";
+
+import { variants } from "../../Animations";
 
 const Courses = () => {
   var settings = {
@@ -13,7 +16,7 @@ const Courses = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    initialSlide: 0, // Set to 0, to show the first slide initially
+    initialSlide: 0, 
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
@@ -24,23 +27,23 @@ const Courses = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-          initialSlide: 0, // Set to 0 to show the first slide initially
+          initialSlide: 0, 
         },
       },
       {
-        breakpoint: 768, // For screens below 768px
+        breakpoint: 768, 
         settings: {
-          slidesToShow: 2, // Display 2 slides
+          slidesToShow: 2, 
           slidesToScroll: 1,
-          initialSlide: 0, // Set to 0 to show the first slide initially
+          initialSlide: 0,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1, // Display 1 slide
+          slidesToShow: 1, 
           slidesToScroll: 1,
-          initialSlide: 0, // Set to 0 to show the first slide initially
+          initialSlide: 0, 
         },
       },
     ],
@@ -55,12 +58,23 @@ const Courses = () => {
         backgroundImage: `url(${CourseBg})`,
       }}
     >
-      <SectionTitle title="Courses" mainTitle="Our Courses" textColor="white" />
-      <CustomSlider
-        content="text"
-        settings={settings}
-        contentData={courseContent}
-      />
+      <motion.div
+        variants={variants["slideFromBottom"]}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <SectionTitle
+          title="Courses"
+          mainTitle="Our Courses"
+          textColor="white"
+        />
+        <CustomSlider
+          content="text"
+          settings={settings}
+          contentData={courseContent}
+        />
+      </motion.div>
     </Box>
   );
 };

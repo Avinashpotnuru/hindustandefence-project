@@ -4,6 +4,9 @@ import { Box } from "@mui/material";
 
 import StroiesBg from "/stories.webp";
 import HeadingTitle from "../HeadingTitle";
+import { motion } from "framer-motion";
+
+import { variants } from "../../Animations";
 
 const Stories = () => {
   const content = [
@@ -14,7 +17,13 @@ const Stories = () => {
   return (
     <Box className="relative flex flex-col justify-center items-center">
       <img className="w-full h-auto" src={StroiesBg} alt="Stories" />
-      <Box className="bg-white border-t-2 border-[#048f18]  w-full md:absolute lg:right-28 lg:top-30 xl:top-56  md:h-[380px] lg:h-[500px] md:w-[400px] lg:w-[500px] ">
+      <motion.div
+        variants={variants["slideFromBottom"]}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="bg-white   w-full md:absolute lg:right-28 lg:top-30 xl:top-56  md:h-[380px] lg:h-[500px] md:w-[400px] lg:w-[500px] "
+      >
         <Box className="h-[10px] bg-[#F5961B] opacity-50 !w-full">{"  "}</Box>
         <Box className="flex flex-col justify-center items-center p-9">
           <HeadingTitle text="Stories" content="Success Story" />
@@ -40,7 +49,7 @@ const Stories = () => {
             ))}
           </Box>
         </Box>
-      </Box>
+      </motion.div>
     </Box>
   );
 };

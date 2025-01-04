@@ -4,6 +4,9 @@ import { HeadingTitle } from "../index";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import Slider from "react-slick";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import { motion } from "framer-motion";
+
+import { variants } from "../../Animations";
 
 const PrevArrow = ({ onClick }) => (
   <IconButton
@@ -82,7 +85,13 @@ const Awards = () => {
 
   return (
     <Box className="flex justify-center items-center bg-[#fbd5be] py-16 md:py-24 lg:py-30 px-5 md:px-8 lg:px-24">
-      <Box className="w-full max-w-[1200px] ">
+      <motion.div
+        variants={variants["slideFromBottom"]}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="w-full max-w-[1200px] "
+      >
         <Slider {...settings}>
           {images.map((image, index) => (
             <Box key={index} className="flex justify-center items-center">
@@ -111,7 +120,7 @@ const Awards = () => {
             </Box>
           ))}
         </Slider>
-      </Box>
+      </motion.div>
     </Box>
   );
 };

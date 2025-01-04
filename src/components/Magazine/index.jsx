@@ -2,6 +2,9 @@ import { Box } from "@mui/material";
 import Slider from "react-slick";
 
 import { HeadingTitle } from "../index";
+import { motion } from "framer-motion";
+
+import { variants } from "../../Animations";
 
 const Magazine = () => {
   const settings = {
@@ -28,7 +31,13 @@ const Magazine = () => {
   ];
 
   return (
-    <Box className="py-16 md:py-24 lg:py-30 px-5 md:px-8 lg:px-24 space-y-6 lg:space-y-8">
+    <motion.div
+      variants={variants["slideFromBottom"]}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="py-16 md:py-24 lg:py-30 px-5 md:px-8 lg:px-24 space-y-6 lg:space-y-8"
+    >
       <HeadingTitle text="Magazine" content="Popular Magazine" />
       <Box className="slider-container">
         <Slider className="" {...settings}>
@@ -41,14 +50,14 @@ const Magazine = () => {
                   alt={`Magazine ${index + 1}`}
                 />
               </Box>
-              <h4 className="text-center p-3 leading-[1.2] text-[#111] font-bold text-[20px] md:text-[24px] lg:text-[26px]">
+              <h4 className="text-center  p-3 leading-[1.2] text-[#111] font-bold text-[14px] md:text-[24px] lg:text-[26px]">
                 {content[index]}
               </h4>
             </Box>
           ))}
         </Slider>
       </Box>
-    </Box>
+    </motion.div>
   );
 };
 

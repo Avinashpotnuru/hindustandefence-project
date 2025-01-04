@@ -61,7 +61,7 @@ const Footer = () => {
       }}
     >
       <Box className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
-        {/* About Section */}
+       
         <Box className=" space-y-4">
           <img className="w-[250px] h-auto" src={Logo} alt="Parmanu Defence" />
           <p className="text-sm font-semibold">
@@ -79,7 +79,7 @@ const Footer = () => {
           </Box>
         </Box>
 
-        {/* Quick Links Section */}
+        
 
         {footerData.map((item, index) => (
           <Box key={index}>
@@ -107,7 +107,7 @@ const Footer = () => {
           </Box>
         ))}
 
-        {/* Contact Section */}
+        
         <Box>
           <h2 className="text-xl font-semibold mb-4 text-white">Contact Us</h2>
           <ul className="space-y-5">
