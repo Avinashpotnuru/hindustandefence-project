@@ -1,4 +1,4 @@
-export const desktopMenuItems = [
+const desktopMenuItems = [
   { id: 1, title: "Home", children: [] },
   { id: 2, title: "Online Registration" },
   {
@@ -6,7 +6,7 @@ export const desktopMenuItems = [
     title: "Institute",
     children: [
       "About Us",
-      "Why Parmanu Defence",
+      "Why Hindustan defence academy",
       "Dehradun History",
       "Salient  Features",
       "Testimonials",
@@ -34,7 +34,7 @@ export const desktopMenuItems = [
     title: "Gallery",
     children: [
       "Photo Gallery",
-      "Life @ Parmanu Defence",
+      "Life @ Hindustan defence academy",
       "Media Coverage",
       "Video Gallery",
       "Guest Faculty of Month",
@@ -55,7 +55,7 @@ export const desktopMenuItems = [
   { id: 10, title: "Contact", children: [] },
 ];
 
-export const courseContent = [
+const courseContent = [
   {
     id: 1,
     title: "Best NDA Coaching in Dehradun",
@@ -110,3 +110,28 @@ export const courseContent = [
     content: "A take-off mechanism for those who reach to SHIKHAR.",
   },
 ];
+
+const awardsContent = [
+  {
+    title: "Awards & Accolades",
+    content:
+      "Appreciation for better work paves the ways for many others to come. Hindustan defence academy officials, Dr Rajesh Kumar & Sushil Kumar were awarded the Educationist award by INDIAN PLAN group for his long, dedicated and exemplary services to the noble cause of education",
+  },
+  {
+    title: "Honored by Bollywood Icon Madhuri Dixit",
+    content:
+      "In a moment of immense pride and distinction, the esteemed  Hindustan Defence Academy Dehradun, led by the visionary Dr. Rajesh Malhotra, has been awarded the prestigious Indo Global Business Award for “Best Defence Academy in North India”.",
+  },
+  {
+    title: "Awards & Accolades",
+    content:
+      "Appreciation for better work paves the ways for many others to come.  HINDUSTAN DEFENCE ACADEMY  officials, Dr Rajesh Kumar & Sushil Kumar were awarded the Educationist award by INDIAN PLAN group for his long, dedicated and exemplary services to the noble cause of education",
+  },
+  {
+    title: "Hindustan Defence Director receives the Nation Icon Award 2023",
+    content:
+      "In a glorious moment of recognition and honor, Dr. Rajesh Malhotra, the Director of Hindustan Defence Academy in Dehradun, has been conferred with the prestigious Nation Icon Award 2023.",
+  },
+];
+
+export { desktopMenuItems, courseContent, awardsContent };

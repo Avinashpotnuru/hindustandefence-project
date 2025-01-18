@@ -12,7 +12,7 @@ const NavbarTop = ({ Logo }) => {
         alt="Parmanu Logo"
         className="h-10 w-auto object-contain"
       />
-      <Box className="flex items-center lg:justify-evenly space-x-2 lg:w-[40%]">
+      <Box className="flex items-center lg:justify-evenly space-x-2 lg:w-[50%] ">
         <Box className="flex items-center space-x-3 group transition-all duration-300">
           <Box
             style={{
@@ -50,7 +50,7 @@ const NavbarTop = ({ Logo }) => {
           <Box className="hidden sm:flex flex-col ">
             <h1 className="font-normal text-sm">Contact Mail</h1>
             <h4 className="text-[#f5961b] font-semibold group-hover:text-black md:hidden lg:block">
-              info@parmanudefence.com
+              info@hindustandefence.com
             </h4>
           </Box>
         </Box>

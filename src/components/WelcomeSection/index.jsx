@@ -45,18 +45,18 @@ const WelcomeSection = () => {
 
           <Box className="gap-3 space-y-3 lg:space-y-6 my-2">
             <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold">
-              Welcome to Parmanu- <br />
-              defence
+              Hindustan defence - <br />
+              academy
             </h2>
             <h1 className="">
-              Parmanu Defence is the best NDA coaching institute in Dehradun
-              that provides a strong infrastructure and platform to Defence
-              aspirants to compete in various defence sector exams laying great
-              emphasis on overall personality grooming and academic excellence,
-              in our endeavour to prepare the students to face the latest
-              Parmanu Defence in the field of defence warfare. We provide a
-              comprehensive course update and study material based on the
-              current syllabus and examination pattern from the current
+              Hindustan defence academy is the best NDA coaching institute in
+              Dehradun that provides a strong infrastructure and platform to
+              Defence aspirants to compete in various defence sector exams
+              laying great emphasis on overall personality grooming and academic
+              excellence, in our endeavour to prepare the students to face the
+              latest Hindustan defence in the field of defence warfare. We
+              provide a comprehensive course update and study material based on
+              the current syllabus and examination pattern from the current
               perspective.
             </h1>
             <Box className="grid grid-cols-1 md:grid-cols-2">

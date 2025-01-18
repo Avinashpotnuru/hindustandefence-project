@@ -12,14 +12,15 @@ const DesktopMenu = ({ activeTab, setActiveTab }) => {
           justifyContent: "space-evenly",
           color: "white",
           padding: 2,
-          width: "80%",
+          width:{md:"100%" ,lg:"80%"},
           margin: "0 auto",
+         
         }}
       >
         {desktopMenuItems?.map((val) => (
           <Box
-            onMouseEnter={() => setActiveTab(val.id)} // Show dropdown when mouse enters
-            onMouseLeave={() => setActiveTab(null)} // Hide dropdown when mouse leaves
+            onMouseEnter={() => setActiveTab(val.id)} 
+            onMouseLeave={() => setActiveTab(null)}
             key={val.id}
             className="relative"
           >

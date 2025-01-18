@@ -29,7 +29,7 @@ const Stories = () => {
           <HeadingTitle text="Stories" content="Success Story" />
           <h3 className=" font-semibold text-sm md:text-lg lg:text-2xl">
             Many Students Have Already Selected In Armed Forces Through
-            Parmanu-defence
+            Hindustan defence academy
           </h3>
           <Box className="grid grid-cols-2 gap-8 mt-8 ">
             {content.map((item, index) => (

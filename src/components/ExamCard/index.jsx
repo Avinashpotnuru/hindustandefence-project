@@ -12,7 +12,7 @@ const ExamCard = ({ image, content,padding }) => {
         />
       </Box>
 
-      <h4 className="text-center p-3 leading-[1.2] text-[#111] font-bold  text-[20px] md:text-[24px] lg:text-[26px]  ">
+      <h4 className="text-center p-3 leading-[1.2] text-[#111] font-bold  text-[20px] md:text-[18px] xl:text-[24px]  ">
         {content}
       </h4>
     </Paper>

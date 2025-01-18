@@ -52,11 +52,11 @@ const MoreInformation = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="space-y-8 lg:space-y-9  lg:px-[120px]"
+        className="space-y-8 lg:space-y-9 lg:px-[40px]  xl:px-[120px]"
       >
         <h2 className="text-center font-bold text-3xl md:text-4xl lg:text-5xl mt-4 ">
           For More Information on Indian armed force{" "}
-          <br className="hidden lg:block" /> Click Below :
+          <br className="hidden xl:block" /> Click Below :
         </h2>
         <Box className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-6">
           {images.map((image, index) => (

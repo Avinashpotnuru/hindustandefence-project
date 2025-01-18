@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 
 import { variants } from "../../Animations";
 
+import {awardsContent} from "../../Data";
+
 const PrevArrow = ({ onClick }) => (
   <IconButton
     onClick={onClick}
@@ -48,29 +50,7 @@ const Awards = () => {
     (_, index) => `/awards/award${index + 1}.webp`
   );
 
-  const content = [
-    {
-      title: "Awards & Accolades",
-      content:
-        "Appreciation for better work paves the ways for many others to come. PARMANU DEFENCE officials, Dr Rajesh Kumar & Sushil Kumar were awarded the Educationist award by INDIAN PLAN group for his long, dedicated and exemplary services to the noble cause of education",
-    },
-    {
-      title: "Honored by Bollywood Icon Madhuri Dixit",
-      content:
-        "In a moment of immense pride and distinction, the esteemed Parmanu Defence Academy Dehradun, led by the visionary Dr. Rajesh Malhotra, has been awarded the prestigious Indo Global Business Award for “Best Defence Academy in North India”.",
-    },
-    {
-      title: "Awards & Accolades",
-      content:
-        "Appreciation for better work paves the ways for many others to come. PARMANU DEFENCE officials, Dr Rajesh Kumar & Sushil Kumar were awarded the Educationist award by INDIAN PLAN group for his long, dedicated and exemplary services to the noble cause of education",
-    },
-    {
-      title:"Parmanu Defence Director receives the Nation Icon Award 2023",
-      content:
-        "In a glorious moment of recognition and honor, Dr. Rajesh Malhotra, the Director of Parmanu Defence Academy in Dehradun, has been conferred with the prestigious Nation Icon Award 2023.",
-    },
-  ];
-
+ 
   const showArrows = images.length > 1;
   const settings = {
     infinite: true,
@@ -90,20 +70,23 @@ const Awards = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="w-full max-w-[1200px] "
+        className="w-full !h-full max-w-[1200px]  "
       >
         <Slider {...settings}>
           {images.map((image, index) => (
             <Box key={index} className="flex justify-center items-center">
-              <Box className="w-[98%] flex flex-col md:flex-row justify-center items-center bg-white">
+              <Box className=" flex flex-col md:flex-row justify-center items-center w-full h-full  bg-white">
                 <img
-                  className="w-full md:w-1/2 h-auto"
+                  className="w-full h-full md:w-1/2  "
                   src={image}
                   alt="awards"
                 />
-                <Box className="p-5 md:w-1/2 space-y-3 md:p-7 lg:p-10">
-                  <HeadingTitle text="Awards" content={content[index].title} />
-                  <h4>{content[index].content}</h4>
+                <Box className="p-5 md:w-1/2 space-y-3 md:p-7 xl:p-10">
+                  <HeadingTitle
+                    text="Awards"
+                    content={awardsContent[index].title}
+                  />
+                  <h4>{awardsContent[index].content}</h4>
                   <Button
                     sx={{
                       fontFamily: "Rajdhani, serif",

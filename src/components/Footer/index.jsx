@@ -38,9 +38,9 @@ const footerData = [
     children: [
       "Admission form",
       "Admission Procedure",
-      "Get Parmanu Defence App",
-      "Life @ Parmanu Defence",
-      "Why Parmanu Defence",
+      "Get Hindustan defence academy App",
+      "Life @ Hindustan defence academy",
+      "Why Hindustan defence academy",
       "Guest Faculty of Month",
       "Gallery",
       "NDA Foundation Course",
@@ -55,20 +55,19 @@ const footerData = [
 const Footer = () => {
   return (
     <Box
-      className="py-12 md:py-10 lg:py-20 px-5 md:px-8 lg:px-20 bg-cover bg-center bg-no-repeat text-white "
+      className="py-12 md:py-10 lg:py-20 px-5 md:px-8 xl:px-20 bg-cover bg-center bg-no-repeat text-white "
       sx={{
         backgroundImage: `url(${FooterBg})`,
       }}
     >
       <Box className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
-       
         <Box className=" space-y-4">
           <img className="w-[250px] h-auto" src={Logo} alt="Parmanu Defence" />
           <p className="text-sm font-semibold">
-            Parmanu Defence is a top ranked defence Institute which provides a
-            strong infrastructure and platform to Defence aspirants to compete
-            in various defence sector exams laying great emphasis on overall
-            personality grooming and academic excellence.
+            Hindustan Defence Academy is a top ranked defence Institute which
+            provides a strong infrastructure and platform to Defence aspirants
+            to compete in various defence sector exams laying great emphasis on
+            overall personality grooming and academic excellence.
           </p>
           <Box className="flex space-x-4 mt-4">
             <Facebook className="cursor-pointer" />
@@ -78,8 +77,6 @@ const Footer = () => {
             <Instagram className="cursor-pointer" />
           </Box>
         </Box>
-
-        
 
         {footerData.map((item, index) => (
           <Box key={index}>
@@ -107,7 +104,6 @@ const Footer = () => {
           </Box>
         ))}
 
-        
         <Box>
           <h2 className="text-xl font-semibold mb-4 text-white">Contact Us</h2>
           <ul className="space-y-5">
@@ -119,7 +115,7 @@ const Footer = () => {
               7078552552
             </li>
             <li className="flex items-center">
-              <Email className="mr-2" /> info@parmanudefence.com
+              <Email className="mr-2" /> info@hindustandefence.com
             </li>
             <li className="flex items-center">
               <LocationOn className="mr-2" /> 151 Doon Vihar, Dehradun

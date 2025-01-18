@@ -25,7 +25,7 @@ const Navbar = () => {
           sx={{ backgroundColor: "#FFF5EB", boxShadow: "none" }}
           position="fixed"
         >
-          <Toolbar className="flex md:justify-between items-center text-black w-full lg:w-[80%] lg:m-auto   p-3">
+          <Toolbar className="flex md:justify-between items-center text-black w-full lg:w-[95%] xl:w-[80%] lg:m-auto   p-3">
             <IconButton
               color="primary"
               edge="start"

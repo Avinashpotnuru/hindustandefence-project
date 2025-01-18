@@ -17,7 +17,7 @@ const HeadingTitle = ({ text, content }) => {
         </h1>
       </Box>
       {content && (
-        <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl ">
+        <h2 className="font-bold text-3xl md:text-4xl xl:text-5xl ">
           {content}{" "}
         </h2>
       )}

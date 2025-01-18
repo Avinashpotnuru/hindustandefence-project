@@ -42,17 +42,17 @@ const EnquiryNowModel = () => {
       className="hide-scrollbar"
       sx={{
         "& .MuiDialog-paper": {
-          overflow: "auto", 
-          maxHeight: "90vh", 
+          overflow: "auto",
+          maxHeight: "90vh",
           display: "flex",
           flexDirection: "column",
-          
+
           "@media (max-width:600px)": {
-            maxHeight: "100vh", 
+            maxHeight: "100vh",
           },
         },
         "& .MuiDialogContent-root": {
-          overflowY: "auto", 
+          overflowY: "auto",
         },
       }}
     >
@@ -74,11 +74,11 @@ const EnquiryNowModel = () => {
           <img
             src={EnqueryingImage}
             alt="Placeholder"
-            className="h-full w-full   object-contain"
+            className="h-full w-full  md:w-[450px] md:h-[450px] lg:h-full lg:w-full   object-contain"
           />
         </Box>
 
-        <Box className="w-full lg:w-[40%] mt-2 p-5">
+        <Box className="w-full lg:w-[40%] mt-2 px-2">
           <Typography variant="h6" align="left" gutterBottom>
             Enquiry Now
           </Typography>
@@ -97,7 +97,6 @@ const EnquiryNowModel = () => {
             onSubmit={handleSubmit(onSubmit)}
             sx={{ mt: 1 }}
           >
-           
             <Box sx={{ mb: 2 }}>
               <input
                 id="name"
@@ -117,7 +116,6 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-          
             <Box sx={{ mb: 2 }}>
               <input
                 id="phone"
@@ -143,7 +141,6 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-           
             <Box sx={{ mb: 2 }}>
               <input
                 id="email"
@@ -169,7 +166,6 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-           
             <Box sx={{ mb: 2 }}>
               <input
                 id="class"
@@ -189,7 +185,6 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-           
             <Box sx={{ mb: 2 }}>
               <input
                 id="city"
@@ -209,7 +204,6 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-           
             <Box sx={{ mb: 3, width: "100%" }}>
               <select
                 id="course"
@@ -219,10 +213,10 @@ const EnquiryNowModel = () => {
                   height: "35px",
                   backgroundColor: "#fff5eb",
                   border: "1px solid #f5961b",
-                  width: "100%", 
+                  width: "100%",
                   padding: "0 10px",
                   boxSizing: "border-box",
-                  overflow: "hidden", 
+                  overflow: "hidden",
                 }}
                 {...register("course", {
                   validate: (value) =>
@@ -240,7 +234,6 @@ const EnquiryNowModel = () => {
               )}
             </Box>
 
-          
             <Button
               fullWidth
               variant="contained"
