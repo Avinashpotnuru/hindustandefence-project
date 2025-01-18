@@ -50,10 +50,14 @@ const EnquiryNowModel = () => {
           "@media (max-width:600px)": {
             maxHeight: "100vh",
           },
+          "@media (max-width:360px)": {
+            maxHeight: "85vh",
+           
+          },
         },
-        "& .MuiDialogContent-root": {
-          overflowY: "auto",
-        },
+        // "& .MuiDialogContent-root": {
+        //   overflowY: "auto",
+        // },
       }}
     >
       <IconButton
@@ -74,7 +78,7 @@ const EnquiryNowModel = () => {
           <img
             src={EnqueryingImage}
             alt="Placeholder"
-            className="h-full w-full  md:w-[450px] md:h-[450px] lg:h-full lg:w-full   object-contain"
+            className="h-full w-full  md:w-[400px] md:h-[400px] lg:h-full lg:w-full   object-contain"
           />
         </Box>
 

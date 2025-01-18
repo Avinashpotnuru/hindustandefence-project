@@ -6,7 +6,6 @@
   padding: 0;
   border: 0;
   font-family: inherit;
-  
 }
 
 .children-dropdown {
@@ -31,11 +30,7 @@
       background-position: center bottom;
     }
   }
-
 }
-
-
-
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -75,33 +70,41 @@
 
 .courses {
   .slick-dots {
-  
     bottom: -50px;
-   
   }
 
-
+  @media screen and (max-width: 360px) {
+    .slick-dots {
+      bottom: -40px;
+    }
+  }
 
   @media (min-width: 768px) and (max-width: 992px) {
     .slick-track {
       height: 38vh;
-    
 
       padding: 20px 0px;
     }
   }
 }
 
+@media screen and (max-width: 360px) {
+  .hide-scrollbar {
 
 
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
 
-.hide-scrollbar {
-  scrollbar-width: none !important;
-}
+    ::-webkit-scrollbar {
+      width: 1px;
 
-.MuiDialog-paperScrollPaper {
-  overflow: auto !important; 
+    }
+
+    img {
+      height: 270px;
+      width: 270px;
+    }
+
+
+
+
+  }
 }
