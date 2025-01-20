@@ -5,8 +5,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import EnquiryNowForm from "../EnquiryNowForm";
+import { useEffect } from "react";
 
-// Custom Previous Arrow Component
 const PrevArrow = ({ onClick }) => (
   <IconButton
     onClick={onClick}
@@ -24,7 +24,6 @@ const PrevArrow = ({ onClick }) => (
   </IconButton>
 );
 
-// Custom Next Arrow Component
 const NextArrow = ({ onClick }) => (
   <IconButton
     onClick={onClick}
@@ -67,17 +66,25 @@ const Header = () => {
     autoplaySpeed: 3000,
     nextArrow: showArrows ? <NextArrow /> : null,
     prevArrow: showArrows ? <PrevArrow /> : null,
-    
   };
+
+  useEffect(() => {
+    const preloadImage = new Image();
+    preloadImage.src = images[0];
+  }, [images]);
 
   return (
     <Box className="header">
+      <link rel="preload" href={images[0]} as="image" />
+
       <Slider className=" h-auto" {...settings}>
         {images.map((image, index) => (
           <img
             key={index}
             src={image}
             alt={`Slide ${index + 1}`}
+            height={isMobile ? "auto" : "100vh"}
+            width={isMobile ? "100%" : "100%"}
             style={{ width: "100%", height: "auto" }}
           />
         ))}

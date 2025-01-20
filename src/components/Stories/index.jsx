@@ -16,7 +16,13 @@ const Stories = () => {
     { number: 5000, title: "Total Students" },];
   return (
     <Box className="relative flex flex-col justify-center items-center">
-      <img className="w-full h-auto" src={StroiesBg} alt="Stories" />
+      <img
+        width="1200" 
+        height="600"
+        className="w-full h-auto"
+        src={StroiesBg}
+        alt="Stories"
+      />
       <motion.div
         variants={variants["slideFromBottom"]}
         initial="hidden"

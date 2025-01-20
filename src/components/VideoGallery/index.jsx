@@ -1,11 +1,11 @@
 import { Box } from "@mui/material";
 import VideoBg from "/videogallerybg.webp";
 import { SectionTitle } from "../index";
-import ReactPlayer from "react-player/youtube";
 import { motion } from "framer-motion";
-
+import { lazy, Suspense } from "react";
 import { variants } from "../../Animations";
 
+const ReactPlayer = lazy(() => import("react-player/youtube"));
 
 const VideoGallery = () => {
   return (
@@ -38,12 +38,16 @@ const VideoGallery = () => {
               position: "relative",
             }}
           >
-            <ReactPlayer
-              url={`https://www.youtube.com/watch?v=${item}`}
-              className="absolute top-0 left-0"
-              width="100%"
-              height="100%"
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+              <ReactPlayer
+                url={`https://www.youtube.com/watch?v=${item}`}
+                className="absolute top-0 left-0"
+                width="100%"
+                height="100%"
+                light={`https://img.youtube.com/vi/${item}/hqdefault.jpg`}
+                aria-label={`Video ${index + 1}`}
+              />
+            </Suspense>
           </Box>
         ))}
       </motion.div>
