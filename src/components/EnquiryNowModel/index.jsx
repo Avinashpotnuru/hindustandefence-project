@@ -21,13 +21,16 @@ const EnquiryNowModel = () => {
 
   const onSubmit = (data) => {
     console.log("Form Submitted Successfully:", data);
+    alert(JSON.stringify(data, null, 2) || data);
     setOpen(false);
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setOpen(true);
-    }, 2000);
+    }, 3000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
@@ -52,12 +55,9 @@ const EnquiryNowModel = () => {
           },
           "@media (max-width:360px)": {
             maxHeight: "85vh",
-           
           },
         },
-        // "& .MuiDialogContent-root": {
-        //   overflowY: "auto",
-        // },
+        
       }}
     >
       <IconButton
