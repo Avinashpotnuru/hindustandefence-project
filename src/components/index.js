@@ -18,7 +18,6 @@ export { default as Magazine } from "./Magazine";
 export { default as Awards } from "./Awards";
 export { default as Footer } from "./Footer";
 export { default as FooterBottom } from "./FooterBottom";
-export { default as Layout } from "./Layout";
 export { default as VideoGallery } from "./VideoGallery";
 export { default as Stories } from "./Stories";
 export { default as EnquiryNowModel } from "./EnquiryNowModel";
