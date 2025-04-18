@@ -74,14 +74,14 @@ const Awards = () => {
       >
         <Slider {...settings}>
           {images.map((image, index) => (
-            <Box key={index} className="flex justify-center items-center">
-              <Box className=" flex flex-col md:flex-row justify-center items-center w-full h-full  bg-white">
+            <Box key={index} className="flex items-center justify-center">
+              <Box className="flex flex-col items-center justify-center w-full h-full bg-white md:flex-row">
                 <img
-                  className="w-full h-full md:w-1/2  "
+                  className="w-full h-full md:w-1/2 "
                   src={image}
                   alt="awards"
                 />
-                <Box className="p-5 md:w-1/2 space-y-3 md:p-7 xl:p-10">
+                <Box className="p-5 space-y-3 md:w-1/2 md:p-7 xl:p-10">
                   <HeadingTitle
                     text="Awards"
                     content={awardsContent[index].title}

@@ -9,7 +9,7 @@ const CourseCard = ({ item }) => {
         <VerifiedIcon sx={{ fontSize: "38px" }} color="primary" />
       </Box>
       <Box className="space-y-3">
-        <h4 className="font-semibold text-xl md:text-2xl lg:text-3xl">
+        <h4 className="text-xl font-semibold md:text-2xl lg:text-3xl">
           {item.title}
         </h4>
         <h4 className="text-sm text-center lg:text-lg">{item.content}</h4>

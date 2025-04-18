@@ -73,7 +73,7 @@ const EnquiryNowModel = () => {
       >
         <CloseIcon />
       </IconButton>
-      <Box className="p-3 flex flex-col lg:flex-row justify-center gap-1 lg:gap-6 items-center relative  ">
+      <Box className="relative flex flex-col items-center justify-center gap-1 p-3 lg:flex-row lg:gap-6 ">
         <Box className="w-full lg:w-[60%]">
           <img
             src={EnqueryingImage}

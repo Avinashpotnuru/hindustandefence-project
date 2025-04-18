@@ -10,10 +10,10 @@ const NavbarTop = ({ Logo }) => {
       <img
         src={Logo}
         alt="Parmanu Logo"
-        className="h-10 w-auto object-contain"
+        className="object-contain w-auto h-10"
       />
       <Box className="flex items-center lg:justify-evenly space-x-2 lg:w-[50%] ">
-        <Box className="flex items-center space-x-3 group transition-all duration-300">
+        <Box className="flex items-center space-x-3 transition-all duration-300 group">
           <Box
             style={{
               border: "1px solid black",
@@ -26,14 +26,14 @@ const NavbarTop = ({ Logo }) => {
           >
             <CallIcon className="group-hover:text-black" color="primary" />
           </Box>
-          <Box className="hidden sm:flex flex-col">
-            <h1 className="font-normal text-sm">Need help? Make a call</h1>
+          <Box className="flex-col hidden sm:flex">
+            <h1 className="text-sm font-normal">Need help? Make a call</h1>
             <h4 className="text-[#f5961b] font-semibold group-hover:text-black">
               8445901901
             </h4>
           </Box>
         </Box>
-        <Box className="flex items-center space-x-3 group transition-all duration-300 ">
+        <Box className="flex items-center space-x-3 transition-all duration-300 group ">
           <Box
             style={{
               border: "1px solid black",
@@ -47,8 +47,8 @@ const NavbarTop = ({ Logo }) => {
             <EmailIcon className="group-hover:text-black" color="primary" />
           </Box>
 
-          <Box className="hidden sm:flex flex-col ">
-            <h1 className="font-normal text-sm">Contact Mail</h1>
+          <Box className="flex-col hidden sm:flex ">
+            <h1 className="text-sm font-normal">Contact Mail</h1>
             <h4 className="text-[#f5961b] font-semibold group-hover:text-black md:hidden lg:block">
               info@hindustandefence.com
             </h4>

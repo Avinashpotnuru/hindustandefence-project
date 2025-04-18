@@ -55,13 +55,13 @@ const footerData = [
 const Footer = () => {
   return (
     <Box
-      className="py-12 md:py-10 lg:py-20 px-5 md:px-8 xl:px-20 bg-cover bg-center bg-no-repeat text-white "
+      className="px-5 py-12 text-white bg-center bg-no-repeat bg-cover md:py-10 lg:py-20 md:px-8 xl:px-20 "
       sx={{
         backgroundImage: `url(${FooterBg})`,
       }}
     >
-      <Box className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
-        <Box className=" space-y-4">
+      <Box className="container grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 lg:grid-cols-4 ">
+        <Box className="space-y-4 ">
           <img className="w-[250px] h-auto" src={Logo} alt="Parmanu Defence" />
           <p className="text-sm font-semibold">
             Hindustan Defence Academy is a top ranked defence Institute which
@@ -69,7 +69,7 @@ const Footer = () => {
             to compete in various defence sector exams laying great emphasis on
             overall personality grooming and academic excellence.
           </p>
-          <Box className="flex space-x-4 mt-4">
+          <Box className="flex mt-4 space-x-4">
             <Facebook className="cursor-pointer" />
 
             <Twitter className="cursor-pointer" />
@@ -80,7 +80,7 @@ const Footer = () => {
 
         {footerData.map((item, index) => (
           <Box key={index}>
-            <h2 className="text-xl text-white font-semibold ">{item.title}</h2>
+            <h2 className="text-xl font-semibold text-white ">{item.title}</h2>
             <Divider
               sx={{
                 backgroundColor: "white",
@@ -94,7 +94,7 @@ const Footer = () => {
               {item.children.map((link, index) => (
                 <li
                   key={index}
-                  className="hover:underline cursor-pointer flex gap-1"
+                  className="flex gap-1 cursor-pointer hover:underline"
                 >
                   <KeyboardArrowRightIcon />
                   {link}
@@ -105,7 +105,7 @@ const Footer = () => {
         ))}
 
         <Box>
-          <h2 className="text-xl font-semibold mb-4 text-white">Contact Us</h2>
+          <h2 className="mb-4 text-xl font-semibold text-white">Contact Us</h2>
           <ul className="space-y-5">
             <li className="flex items-center">
               <Phone className="mr-2" /> 8445901901

@@ -23,7 +23,7 @@ const Gallery = () => {
 
   return (
     <Box
-      className="py-8 md:py-10 lg:py-14 px-5 md:px-8 lg:px-20 "
+      className="px-5 py-8 md:py-10 lg:py-14 md:px-8 lg:px-20 "
       sx={{
         backgroundColor: "white",
 
@@ -45,17 +45,17 @@ const Gallery = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-5 "
+        className="grid grid-cols-2 gap-5 mt-5 lg:grid-cols-4 "
       >
         {galleryImages.map((val, index) => (
           <Box
             key={index}
-            className="group  bg-green-300 w-full relative overflow-hidden"
+            className="relative w-full overflow-hidden bg-green-300 group"
           >
             <img
               src={val}
               alt="images"
-              className="w-full h-full object-cover hover:scale-110 transition-all duration-300"
+              className="object-cover w-full h-full transition-all duration-300 hover:scale-110"
             />
 
             <Box className="absolute my-auto w-full bottom-[-40px] py-2 px-1 z-10 group-hover:bottom-0 transition-all duration-300 text-xs lg:text-base titleBg overflow-hidden max-h-[40px]">

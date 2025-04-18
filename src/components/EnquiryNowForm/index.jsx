@@ -31,7 +31,7 @@ const EnquiryNowForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={2} direction={isMobile ? "column" : "row"}>
           <Grid item xs={isMobile ? 12 : 3}>
-            <h1 className="text-white font-bold"> Enquiry Now</h1>
+            <h1 className="font-bold text-white"> Enquiry Now</h1>
             <h1 className="text-white ">
               {" "}
               For Getting Free Study Material and Test Series

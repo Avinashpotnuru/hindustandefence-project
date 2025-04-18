@@ -17,7 +17,7 @@ const Stories = () => {
     { number: 5000, title: "Total Students" },
   ];
   return (
-    <Box className="relative flex flex-col justify-center items-center">
+    <Box className="relative flex flex-col items-center justify-center">
       <img
         width="1200"
         height="600"
@@ -33,9 +33,9 @@ const Stories = () => {
         className="bg-white   w-full md:absolute lg:right-28 lg:top-30 xl:top-56  md:h-[380px] lg:h-[500px] md:w-[400px] lg:w-[500px] "
       >
         <Box className="h-[10px] bg-[#F5961B] opacity-50 !w-full">{"  "}</Box>
-        <Box className="flex flex-col justify-center items-center p-9">
+        <Box className="flex flex-col items-center justify-center p-9">
           <HeadingTitle text="Stories" content="Success Story" />
-          <h3 className=" font-semibold text-sm md:text-lg lg:text-2xl">
+          <h3 className="text-sm font-semibold md:text-lg lg:text-2xl">
             Many Students Have Already Selected In Armed Forces Through
             Hindustan defence academy
           </h3>
