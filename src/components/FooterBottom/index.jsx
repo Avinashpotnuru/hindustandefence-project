@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 const FooterBottom = () => {
   return (
     <Box className="bg-[#048f18] text-white py-8 text-sm px-5 lg:px-28 w-full !border-t-2 !border-white ">
-      <Box className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-center md:text-left">
+      <Box className="container flex flex-col items-center justify-between mx-auto space-y-4 text-center md:flex-row md:space-y-0 md:text-left">
         <Box className="flex items-center gap-5">
           <a href="/privacy-policy" className="hover:underline">
             Privacy Policy

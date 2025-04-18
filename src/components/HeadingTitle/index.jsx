@@ -3,8 +3,8 @@ import { Box, Divider } from "@mui/material";
 
 const HeadingTitle = ({ text, content }) => {
   return (
-    <Box className="flex flex-col  w-full  items-start gap-3">
-      <Box className="flex items-center space-x-3 w-full">
+    <Box className="flex flex-col items-start w-full gap-3">
+      <Box className="flex items-center w-full space-x-3">
         <Divider
           sx={{
             backgroundColor: "orange ",
@@ -12,12 +12,12 @@ const HeadingTitle = ({ text, content }) => {
             height: "3px",
           }}
         />
-        <h1 className="text-center font-bold uppercase tracking-wide text-sm  text-black">
+        <h1 className="text-sm font-bold tracking-wide text-center text-black uppercase">
           {text}
         </h1>
       </Box>
       {content && (
-        <h2 className="font-bold text-3xl md:text-4xl xl:text-5xl ">
+        <h2 className="text-3xl font-bold md:text-4xl xl:text-5xl ">
           {content}{" "}
         </h2>
       )}

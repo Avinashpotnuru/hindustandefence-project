@@ -14,7 +14,7 @@ const MobileDrawer = ({ setMobileOpen }) => {
     setActiveTab(activeTab === id ? null : id);
   };
   return (
-    <Box className="bg-orange-50 h-full">
+    <Box className="h-full bg-orange-50">
       <Box
         sx={{
           backgroundColor: "primary.main",
@@ -29,7 +29,7 @@ const MobileDrawer = ({ setMobileOpen }) => {
         <img
           src={Logo}
           alt="Parmanu Logo"
-          className="h-10 w-auto object-contain"
+          className="object-contain w-auto h-10"
         />
         <CloseIcon onClick={() => setMobileOpen(false)} className="text-white" />
       </Box>

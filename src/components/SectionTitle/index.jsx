@@ -14,7 +14,7 @@ const SectionTitle = ({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
-      className="flex flex-col justify-center items-center space-y-2 lg:space-y-4 gap-4 w-full p-5"
+      className="flex flex-col items-center justify-center w-full gap-4 p-5 space-y-2 lg:space-y-4"
     >
       <Box className="flex justify-center items-center gap-3 w-[70%] md:w-1/2 ">
         <Divider
@@ -40,7 +40,7 @@ const SectionTitle = ({
       </Box>
 
       <h3
-        className="font-bold font-rajdhani tracking-wide text-3xl md:text-4xl  lg:text-5xl"
+        className="text-3xl font-bold tracking-wide font-rajdhani md:text-4xl lg:text-5xl"
         style={{ color: textColor }}
       >
         {mainTitle}

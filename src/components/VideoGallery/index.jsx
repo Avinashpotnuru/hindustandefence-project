@@ -10,7 +10,7 @@ const ReactPlayer = lazy(() => import("react-player/youtube"));
 const VideoGallery = () => {
   return (
     <Box
-      className="py-12 md:py-10 lg:py-20 px-5 md:px-8 lg:px-20 bg-cover bg-center bg-no-repeat"
+      className="px-5 py-12 bg-center bg-no-repeat bg-cover md:py-10 lg:py-20 md:px-8 lg:px-20"
       sx={{
         backgroundImage: `url(${VideoBg})`,
       }}
@@ -25,7 +25,7 @@ const VideoGallery = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        className="grid grid-cols-1 gap-8 md:grid-cols-2"
       >
         {["_wwKuirP9Qg", "22NVcnBCl80"].map((item, index) => (
           <Box

@@ -77,7 +77,7 @@ const Header = () => {
     <Box className="header">
       <link rel="preload" href={images[0]} as="image" />
 
-      <Slider className=" h-auto" {...settings}>
+      <Slider className="h-auto " {...settings}>
         {images.map((image, index) => (
           <img
             key={index}

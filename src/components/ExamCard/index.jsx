@@ -6,7 +6,7 @@ const ExamCard = ({ image, content,padding }) => {
     <Paper className={`overflow-hidden ${padding && 'p-2'}`} elevation={3}>
       <Box className="overflow-hidden">
         <img
-          className="w-full h-auto hover:scale-105 transition-all duration-300  "
+          className="w-full h-auto transition-all duration-300 hover:scale-105 "
           src={image}
           alt="exam"
         />

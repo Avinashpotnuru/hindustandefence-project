@@ -18,7 +18,6 @@ const LandingPage = () => {
   return (
     <Box className="w-full overflow-hidden">
       <EnquiryNowModel />
-
       <Header />
       <WelcomeSection />
       <Gallery />

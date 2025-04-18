@@ -42,7 +42,7 @@ const DesktopMenu = ({ activeTab, setActiveTab }) => {
               >
                 {val.children.map((child) => (
                   <h1
-                    className="text-black space-y-3 font-semibold text-sm px-2"
+                    className="px-2 space-y-3 text-sm font-semibold text-black"
                     key={child}
                   >
                     {child}

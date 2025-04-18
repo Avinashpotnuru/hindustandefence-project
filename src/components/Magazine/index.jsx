@@ -36,16 +36,16 @@ const Magazine = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
-      className="py-16 md:py-24 lg:py-30 px-5 md:px-8 lg:px-24 space-y-6 lg:space-y-8"
+      className="px-5 py-16 space-y-6 md:py-24 lg:py-30 md:px-8 lg:px-24 lg:space-y-8"
     >
       <HeadingTitle text="Magazine" content="Popular Magazine" />
       <Box className="slider-container">
         <Slider className="" {...settings}>
           {images.map((item, index) => (
-            <Box key={index} className="overflow-hidden mx-3 p-2 rounded-md ">
+            <Box key={index} className="p-2 mx-3 overflow-hidden rounded-md ">
               <Box className="overflow-hidden ">
                 <img
-                  className="w-full h-auto hover:scale-105 transition-all duration-300"
+                  className="w-full h-auto transition-all duration-300 hover:scale-105"
                   src={item}
                   alt={`Magazine ${index + 1}`}
                 />

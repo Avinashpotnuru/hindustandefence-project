@@ -30,7 +30,7 @@ const WelcomeSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="w-full lg:w-1/2 h-auto"
+          className="w-full h-auto lg:w-1/2"
           src={Welcome}
           alt="Welcome"
         />
@@ -39,12 +39,12 @@ const WelcomeSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="w-full lg:w-1/2 bg-white flex flex-col justify-center items-center p-5 lg:p-10"
+          className="flex flex-col items-center justify-center w-full p-5 bg-white lg:w-1/2 lg:p-10"
         >
           <HeadingTitle text="About Our Academy" />
 
-          <Box className="gap-3 space-y-3 lg:space-y-6 my-2">
-            <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold">
+          <Box className="gap-3 my-2 space-y-3 lg:space-y-6">
+            <h2 className="text-3xl font-bold md:text-5xl lg:text-5xl">
               Hindustan defence - <br />
               academy
             </h2>
@@ -61,7 +61,7 @@ const WelcomeSection = () => {
             </h1>
             <Box className="grid grid-cols-1 md:grid-cols-2">
               {data.map((item, i) => (
-                <Box className=" flex items-center gap-3 " key={i}>
+                <Box className="flex items-center gap-3 " key={i}>
                   <img className="py-1" src={Complete} alt="Welcome" />
                   <h6 className="font-semibold text-black uppercase">{item}</h6>
                 </Box>
